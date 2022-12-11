@@ -17,12 +17,13 @@ def is_adjacent(H: tuple | list, T: tuple | list) -> bool:
     return False
 
 
-with open("input.txt") as f:
+with open("input_test.txt") as f:
     lines = [line.strip("\n") for line in f]
     # starting point (x, y) for head and tail
-    H = [0, 0]
-    T = [0, 0]
+    H = (0, 0)
+    T = (0, 0)
     visited = set()
+    visited.add((0, 0))
     buffer = []  # buffer of moves
 
 for line in lines:
